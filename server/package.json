@@ -11,6 +11,11 @@
     "express": "~4.16.1",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.1",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "history": "^5.0.0"
   }
 }

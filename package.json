@@ -1,0 +1,55 @@
+{
+  "name": "casein2021",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "idb-keyval": "^3.2.0",
+    "node-fetch": "^2.6.0",
+    "object-assign": "^4.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-tooltip": "^4.2.7"
+  },
+  "resolutions": {
+    "react-helmet/react-side-effect": "^2.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "debug": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-meta-tags": "^1.0.1"
+  }
+}
