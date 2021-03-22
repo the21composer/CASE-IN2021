@@ -1,5 +1,5 @@
 import React from "react";
-import "PersonalArea.css";
+import "./PersonalArea.css";
 
 
 export default function PersonalArea(props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "ChatBot.css";
+import "./ChatBot.css";
 
 
 export default function ChatBot(props) {

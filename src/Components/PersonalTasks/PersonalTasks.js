@@ -1,5 +1,5 @@
 import React from "react";
-import "PersonalTasks.css";
+import "./PersonalTasks.css";
 
 
 export default function PersonalTasks(props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "MainPage.css";
+import "./MainPage.css";
 
 
 export default function MainPage(props) {
