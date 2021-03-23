@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
     success:Number, // Прогресс, лучше хранить здесь, чтобы было проще
     email:String,
     phone:String,
-    tasks:[{name:String, done:Boolean, link:String, code:Number}]
+    tasks:[{name:String, done:Boolean, link:String, code:Number, date:Date}]
 });
 
 const User = mongoose.model('users', userSchema);
@@ -34,12 +34,14 @@ function initDB() {
             {
                 name:"Изучить устав компании",
                 done:false,
-                code:0
+                code:0,
+                date:null
             },
             {
                 name:"Познакомиться с чат ботом",
-                done:false,
-                code:1
+                done:true,
+                code:1,
+                date:Date.now()
             },
         ]
     })
@@ -74,7 +76,7 @@ function initDB() {
     users.forEach(x => {
         x.save()
     })
-    User.deleteMany({role: {$gte: 0}})
+    //User.deleteMany({role: {$gte: 0}})
     return users
 }
 
