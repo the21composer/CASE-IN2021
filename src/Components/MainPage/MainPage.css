@@ -1,0 +1,5 @@
+.main-page-wrapper{
+    display: grid;
+    grid-auto-flow: row;
+}
+

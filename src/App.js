@@ -14,6 +14,7 @@ import PersonalTasks from "./Components/PersonalTasks/PersonalTasks";
 import ChatBot from "./Components/ChatBot/ChatBot";
 import ChatRoom from "./Components/ChatPage/ChatRoom";
 import Documents from "./Components/Docs/Documents";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const API_URL = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? `${window.location.protocol}//${window.location.hostname}:3030/api/v1/` :
     `${window.location.protocol}//${window.location.host}/api/v1/`;
@@ -21,11 +22,17 @@ export const API_URL = (!process.env.NODE_ENV || process.env.NODE_ENV === 'devel
 export default function App(){
     const { token, setToken } = useToken();
 
-    if (!token) {
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname === '/' || location.pathname === '')
+            helperRedirect('/mainPage');
+    }, []);
+
+    /*if (!token) {
         return (<>
             <Login setToken = {setToken}/>
         </>);
-    }
+    }*/
 
     return (
         <div className='App'>
