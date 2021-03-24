@@ -82,6 +82,11 @@ class DBMaster {
             return results[0].toJSON().tasks.filter(t => t.done = false);
         })
     }
+    getUserInfo(nickname) {
+        this.User.find({nickname:nickname}, (err, results) => {
+            return results[0].toJSON();
+        })
+    }
 }
 
 module.exports = {DBMaster}
