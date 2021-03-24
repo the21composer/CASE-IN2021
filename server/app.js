@@ -17,4 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+const db = require("./init_db.js");
+let ddb = new db.DBMaster()
+console.log(ddb.getUserTasks("Работник"))
 module.exports = app;
