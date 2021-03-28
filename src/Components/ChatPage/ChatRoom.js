@@ -2,6 +2,8 @@ import React from "react";
 import "./ChatRoom.css";
 import Header from "../Header/Header";
 import ListOfCards from "../ListOfCards/ListOfCards";
+import ChatHistory from "./chatHistory";
+import AutoTextArea from "./chatInput";
 
 export default function ChatRoom(props) {
 
@@ -12,7 +14,8 @@ export default function ChatRoom(props) {
                 <ListOfCards currentPage = "chatRoom" className = 'list-of-cards'/>
             </div>
             <div className='chat-wrapper'>
-                Это чат с адаптером
+                    <ChatHistory/>
+                    <AutoTextArea/>
             </div>
         </div>
     </>);

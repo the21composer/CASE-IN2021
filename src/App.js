@@ -4,7 +4,7 @@ import {
     Switch,
     Route, Redirect
 } from "react-router-dom";
-import Login from "./Components/StartPage/Login";
+import Login from "./Components/Login/Login";
 import useToken from "./Components/Helpers/useToken";
 import {helperRedirect, setHistory} from './Components/Helpers/Redirect';
 
@@ -20,19 +20,18 @@ export const API_URL = (!process.env.NODE_ENV || process.env.NODE_ENV === 'devel
     `${window.location.protocol}//${window.location.host}/api/v1/`;
 
 export default function App(){
-    const { token, setToken } = useToken();
+    const {token, setToken} = useToken();
 
     const location = useLocation();
     useEffect(() => {
         if (location.pathname === '/' || location.pathname === '')
             helperRedirect('/mainPage');
-    }, []);
+    }, [location.pathname]);
 
-    /*if (!token) {
-        return (<>
-            <Login setToken = {setToken}/>
-        </>);
-    }*/
+
+    if (!token) {
+        return (<Login setToken={setToken}/>);
+    }
 
     return (
         <div className='App'>

@@ -1,0 +1,9 @@
+.Login--container {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+.Login--label-remember {
+	margin: 5px 5px 5px 0;
+}
