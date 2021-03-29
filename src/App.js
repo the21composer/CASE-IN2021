@@ -15,6 +15,7 @@ import ChatBot from "./Components/ChatBot/ChatBot";
 import ChatRoom from "./Components/ChatPage/ChatRoom";
 import Documents from "./Components/Docs/Documents";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 export const API_URL = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? `${window.location.protocol}//${window.location.hostname}:3030/api/v1/` :
     `${window.location.protocol}//${window.location.host}/api/v1/`;

@@ -1,3 +1,159 @@
-.progress-bar{
-    width: 200px;
+.progress-bar-div{
+    width: 400px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.percentage {
+    display: inline;
+    vertical-align: text-bottom;
+}
+
+.show-more-button:hover {
+    background-color: #339ebf;
+    border: 5px solid #339ebf;
+}
+
+.show-more-button {
+    border: 5px solid #6BC3E3;
+    border-radius: 10px;
+    background-color: #6BC3E3;
+    color: azure;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.check-list-heading {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #6bc3e3;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+.check-list-info {
+    margin-left:30px;
+    font-weight: 300;
+}
+
+.task-in-check-list {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.show-more-form {
+    margin: 10px 0 10px 25px;
+}
+
+.task-text {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.progress-heading {
+    font-weight: 300;
+}
+
+.check-list-progress-short {
+    margin-top: 30px;
+    padding-left: 50px;
+}
+
+.history-heading {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.history-tasks .task-in-check-list {
+    margin-left: 30px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    .check-list-heading {
+        font-size: 16px;
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .check-list-info {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .task-text {
+        padding-left: 5px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+
+    .show-more-button:hover {
+        border: 3px solid #339ebf;
+    }
+
+    .show-more-button {
+        border: 3px solid #6BC3E3;
+        font-size: 10px;
+    }
+
+    .task-in-check-list {
+        display: flex;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .link-icon {
+        width: 20px;
+    }
+
+    .check-list-progress-short {
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    .progress-bar-div{
+        width: 200px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 5px;
+    }
+
+    .progress-heading {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    .percentage {
+        font-size: 12px;
+    }
+
+    .cost {
+        font-size: 12px;
+    }
+
+    .history-heading {
+        margin-top: 5px;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .history-tasks .task-in-check-list {
+        margin-left: 5px;
+    }
+
+    .show-more-form {
+        margin: 5px 0 10px 15px;
+    }
 }

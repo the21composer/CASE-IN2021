@@ -1,0 +1,152 @@
+.user-image-img {
+    width: 150px;
+}
+
+.main-info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "a b b"
+        "a c c"
+        "a d d"
+        "a e e";
+    margin-bottom: 30px;
+}
+
+.user-image {
+    grid-area: a;
+    border: 3px solid #777777;
+    width: fit-content;
+    margin: auto;
+}
+
+.full-name {
+    grid-area: b;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.mail {
+    grid-area: c;
+}
+
+.position {
+    grid-area: d;
+    font-size: 14px;
+    background-color: #071b2b;
+    color: #f2f9fd;
+    width: max-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.birth-date {
+    grid-area: e;
+}
+
+.personal-info-wrapper {
+    margin: 30px 250px;
+}
+
+.additional-info {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 1fr 3fr;
+}
+
+.phone, .address, .about-me {
+    align-self: end;
+}
+
+.save-button:hover {
+    background-color: #339ebf;
+    border: 5px solid #339ebf;
+}
+
+.save-button{
+    border: 5px solid #6BC3E3;
+    border-radius: 10px;
+    background-color: #6BC3E3;
+    color: azure;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    right: 250px;
+    margin-top: 30px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    .user-image-img {
+        width: 100px;
+    }
+
+    .main-info {
+        margin-bottom: 0;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 0.5fr 0.75fr 0.5fr;
+    }
+
+    .user-image {
+        border: 1px solid #777777;
+    }
+
+    .full-name {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    .mail {
+        grid-area: c;
+        font-size: 12px;
+    }
+
+    .position {
+        grid-area: d;
+        font-size: 12px;
+    }
+
+    .birth-date {
+        grid-area: e;
+        font-size: 12px;
+    }
+
+    .personal-info-wrapper {
+        margin: 30px 10px;
+    }
+
+
+    .phone, .address, .about-me {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .save-button:hover {
+        background-color: #339ebf;
+        border: 5px solid #339ebf;
+    }
+
+    .save-button{
+        border: 5px solid #6BC3E3;
+        border-radius: 10px;
+        background-color: #6BC3E3;
+        color: azure;
+        font-weight: bold;
+        font-size: 14px;
+        position: absolute;
+        right: 10px;
+        margin-top: 10px;
+    }
+
+    .about-me-input, .address-input, .phone-input {
+        font-size: 12px;
+    }
+
+    .about-me {
+        margin-bottom: 5px;
+    }
+
+}

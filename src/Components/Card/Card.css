@@ -1,3 +1,55 @@
 .card-logo {
-    width: 50px;
+    width: 50%;
+}
+
+.card-link{
+    background-color: #6bc3e3;
+    color: aliceblue;
+    font-weight: bold;
+    border: thick #57A6BD;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    font-size: 18px;
+}
+
+.card-link:hover {
+    background-color: #339ebf;
+    border: thick #57A6BD;
+}
+
+.card-name{
+    background: #071b2b;
+    border-radius: 10px;
+    width: 140px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+
+    .card-link{
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .card-name{
+        width: 70px;
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
 }

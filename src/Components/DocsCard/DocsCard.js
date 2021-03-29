@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import { Document, Page, pdfjs  } from 'react-pdf';
 import "./DocsCard.css";
 import samplePDF from './test.pdf';
+import previous_icon from './Icons/baseline_keyboard_arrow_left_black_36dp.png';
+import next_icon from './Icons/baseline_keyboard_arrow_right_black_36dp.png';
 
 
 export default function DocsCard(props) {
@@ -17,7 +19,6 @@ export default function DocsCard(props) {
 
     function onDocumentLoadSuccess({numPages}) {
         setNumPages(numPages);
-        //setPageNumber(1);
     }
 
     function changePage(offset) {
@@ -32,13 +33,13 @@ export default function DocsCard(props) {
         changePage(1);
     }
 
-    return (<>
+    return (<div className='doc-pdf-wrapper'>
         <div className='doc-info-wrapper'>
             <div className='docs-name'>
                 {props.name}
             </div>
             <form>
-                <button type = 'button' onClick={() => setPdfShown(!isPdfShown)}>{isPdfShown? "Закрыть" : "Открыть"}</button>
+                <button className='pdf-open-button' type = 'button' onClick={() => setPdfShown(!isPdfShown)}>{isPdfShown? "Закрыть" : "Открыть"}</button>
             </form>
         </div>
         <div className={isPdfShown? 'pdf-wrapper' : 'pdf-hidden'}>
@@ -48,27 +49,28 @@ export default function DocsCard(props) {
             >
                 <Page pageNumber={pageNumber} />
             </Document>
-            <div>
-                <p>
-                    Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
-                </p>
+            <div className='page-number-wrapper'>
                 <button
+                    className='page-button'
                     type="button"
                     disabled={pageNumber <= 1}
                     onClick={previousPage}
                 >
-                    Previous
+                    <img className='page-button-icon' src={previous_icon} alt = "previous page"/>
                 </button>
+                <p>
+                    {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
+                </p>
                 <button
+                    className='page-button'
                     type="button"
                     disabled={pageNumber >= numPages}
                     onClick={nextPage}
                 >
-                    Next
+                    <img className='page-button-icon' src={next_icon} alt = "next page"/>
                 </button>
             </div>
-            <p>Page {pageNumber} of {numPages}</p>
         </div>
-        </>
+        </div>
     );
 }

@@ -1,0 +1,49 @@
+.exit-button-form {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.exit-button:hover {
+    background-color: #339ebf;
+    border: 5px solid #339ebf;
+}
+
+.exit-button {
+    border: 5px solid #6BC3E3;
+    border-radius: 10px;
+    background-color: #6BC3E3;
+    color: azure;
+    font-weight: bold;
+}
+
+.header-text {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #071b2b;
+    margin-bottom: 10px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    .header-text {
+        margin-top: 15px;
+        margin-left: 10px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .exit-button {
+        font-size: 14px;
+        border: 3px solid #6BC3E3;
+    }
+
+    .exit-button:hover {
+        border: 3px solid #339ebf;
+    }
+}
